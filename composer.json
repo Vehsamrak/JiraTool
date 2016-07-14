@@ -22,7 +22,8 @@
         "symfony/console": "^3.1",
         "guzzlehttp/guzzle": "^6.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "symfony/yaml": "^3.1"
+        "symfony/yaml": "^3.1",
+        "symfony/dependency-injection": "^3.1"
     },
     "scripts": {
         "post-install-cmd": [
