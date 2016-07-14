@@ -1,0 +1,15 @@
+{
+    "name": "vehsamrak/jiratool",
+    "authors": [
+        {
+            "name": "Petr Karmashev",
+            "email": "smonkl@bk.ru",
+            "homepage": "https://github.com/vehsamrak"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/console": "^3.1",
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
