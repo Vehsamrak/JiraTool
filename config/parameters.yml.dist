@@ -1,0 +1,4 @@
+parameters:
+    jira_url: https://
+    jira_username: ~
+    jira_password: ~
