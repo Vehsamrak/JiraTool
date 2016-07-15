@@ -1,4 +1,5 @@
 parameters:
     jira_url: https://jira.atlassian.com/rest/api/latest/
+    jira_ssl_verification: true
     jira_username: username
     jira_password: password

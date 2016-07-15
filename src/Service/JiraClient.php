@@ -22,16 +22,21 @@ class JiraClient
     /** @var string */
     private $jiraUrl;
 
+    /** @var bool */
+    private $verifySSL;
+
     public function __construct(
         string $username,
         string $password,
         string $jiraUrl,
+        bool $verifySSL = true,
         Client $client = null
     ) {
         $this->client = $client ?? new Client();
         $this->username = $username;
         $this->password = $password;
         $this->jiraUrl = $jiraUrl;
+        $this->verifySSL = $verifySSL;
     }
 
     public function searchByJQL(string $jql)
@@ -43,15 +48,15 @@ class JiraClient
 
     private function sendGetRequest(string $apiResource): array
     {
+        $options = [
+            'verify' => $this->verifySSL,
+        ];
+
         if ($this->username && $this->password) {
-            $options = [
-                'auth' => [
-                    $this->username,
-                    $this->password,
-                ],
+            $options['auth'] = [
+                $this->username,
+                $this->password,
             ];
-        } else {
-            $options = [];
         }
 
 

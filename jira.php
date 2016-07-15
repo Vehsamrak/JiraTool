@@ -17,7 +17,8 @@ $container = new ContainerBuilder();
 $container->register('jira_client', JiraClient::class)
     ->addArgument($config->get('jira_username'))
     ->addArgument($config->get('jira_password'))
-    ->addArgument($config->get('jira_url'));
+    ->addArgument($config->get('jira_url'))
+    ->addArgument($config->get('jira_ssl_verification'));
 
 $application = new Application();
 $application->add(new SearchIssuesCommand($container));
